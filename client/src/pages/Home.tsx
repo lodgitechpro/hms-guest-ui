@@ -12,11 +12,16 @@ export default function Home() {
     setActiveStep(0);
     navigate("/check-in");
   };
+  
+  const handleNewBookingClick = () => {
+    setActiveStep(0);
+    navigate("/new-booking");
+  };
 
   return (
     <>
       <div className="bg-white rounded-lg p-8 mb-8 elevation-1">
-        <h2 className="text-3xl font-bold text-primary-dark mb-4">Welcome to Grand Palace Hotel</h2>
+        <h2 className="text-3xl font-bold text-primary-dark mb-4">Welcome to HMS Hotel</h2>
         <p className="text-gray-700 text-lg mb-6">Experience a seamless stay with our self-service tablet. Check in, book a room, or explore our services - all at your fingertips.</p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Button 
@@ -27,8 +32,8 @@ export default function Home() {
             Check In
           </Button>
           <Button 
-            className="bg-secondary hover:bg-secondary-dark text-white px-6 py-6 rounded-md text-lg font-medium transition-all flex items-center justify-center h-auto"
-            variant="secondary"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-6 rounded-md text-lg font-medium transition-all flex items-center justify-center h-auto"
+            onClick={handleNewBookingClick}
           >
             <PlusCircle className="mr-2 h-5 w-5" />
             New Booking

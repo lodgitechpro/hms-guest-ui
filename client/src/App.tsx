@@ -4,6 +4,7 @@ import NotFound from "@/pages/not-found";
 import Home from "./pages/Home";
 import CheckIn from "./pages/CheckIn";
 import CheckInSuccess from "./pages/CheckInSuccess";
+import NewBooking from "./pages/NewBooking";
 import AppHeader from "./components/AppHeader";
 import { BookingProvider } from "./contexts/BookingContext";
 
@@ -13,6 +14,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/check-in" component={CheckIn} />
       <Route path="/check-in-success" component={CheckInSuccess} />
+      <Route path="/new-booking" component={NewBooking} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
     </Switch>
